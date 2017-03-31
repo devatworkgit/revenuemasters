@@ -1,0 +1,75 @@
+.footer_top {
+  padding-top: 75px;
+  padding-bottom: 55px;
+  background-image: url('../images/footer_top-bg.png');
+  background-size: cover;
+  color: @white;
+  #block-simplenewssubscription {
+    font-size: 18px;
+    #simplenews-subscriptions-block-newsletter {
+      max-width: 585px;
+      margin: 0 auto;
+      position: relative;
+      .field--name-mail {
+        margin-bottom: 0;
+        position: absolute;
+        width: 100%;
+        label {
+          display: none;
+        }
+        input {
+          .font(@roboto, 400, italic);
+          min-height: 50px;
+          border: 2px solid @azure;
+          border-radius: 25px;
+          background-color: transparent;
+          padding-left: 30px;
+          padding-right: 185px;
+          color: @grey;
+        }
+      }
+      .form-actions {
+        position: relative;
+        float: right;
+        z-index: 2;
+        .btn {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: @light-black;
+  margin-top: 0;
+  border: none;
+  color: @white;
+  font-size: 14px;
+  #block-revenuemasters-footer {
+    text-align: right;
+    .menu {
+      li {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        a {
+          padding: 0;
+          color: @white;
+          &:hover, 
+          &:focus, 
+          &.is-active {
+            background-color: transparent;
+            color: @azure;
+          }
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

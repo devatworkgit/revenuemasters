@@ -1,0 +1,28 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Revenue Masters'
+description: 'Revenue Masters Bootstrap subtheme.'
+package: 'Revenue Masters'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  head: 'Top Region'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  bottom_1: 'Bottom 1'
+  bottom_2: 'Bottom 2'
+  bottom_3: 'Bottom 3'
+  footer_top: 'Top Footer'
+  footer: 'Footer'
+
+libraries:
+  - 'revenuemasters/global-styling'
+  - 'revenuemasters/global-scripts'
+  - 'revenuemasters/bootstrap-scripts'

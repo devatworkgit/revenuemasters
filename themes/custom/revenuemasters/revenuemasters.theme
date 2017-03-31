@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+ 
+function revenuemasters_form_simplenews_subscriptions_block_newsletter_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if(isset($form['mail']['widget'][0]['value']['#placeholder'])) {
+    $form['mail']['widget'][0]['value']['#placeholder'] = t('Enter your email address ...');
+  }
+}

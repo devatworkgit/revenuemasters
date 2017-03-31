@@ -1,0 +1,30 @@
+{
+  "name": "revenuemasters",
+  "version": "1.0.0",
+  "description": "Build utility for working with the Revenue Masters bootstrap subtheme",
+  "author": "Macaria Ion",
+  "contributors": [
+    "Ion Macaria <macaria_ion@yahoo.com>"
+  ],
+  "dependencies": {
+    "swiper": "^3.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
+  },
+  "license": "Private",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": []
+}

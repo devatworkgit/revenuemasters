@@ -1,0 +1,108 @@
+body {
+  .font(@roboto, 300);
+  font-size: 16px;
+}
+
+h1, .h1 {
+  .font(@proximanovaalt);
+  font-size: 48px;
+}
+
+h2, .h2 {
+  .font(@roboto, 400);
+  font-size: 36px;
+}
+
+h4, .h4 {
+  .font(@roboto, 400);
+  font-size: 20px;
+}
+
+.page-header {
+  border: none;
+}
+
+.btn-default {
+  .font(@roboto, 400);
+  font-size: 18px;
+  text-transform: uppercase;
+  color: @white;
+  background-color: @azure;
+  border: 2px solid @azure;
+  padding: 10.5px 30px;
+  border-radius: 25px;
+  &:hover, 
+  &:focus, 
+  &:active, 
+  &:active:focus {
+    color: @white;
+    border-color: @grey;
+    background-color: @grey;
+    outline: none;
+  }
+}
+
+.azure-transparent-btn {
+  .font(@roboto, 400);
+  color: @azure;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 30px;
+  border: 2px solid @azure;
+  border-radius: 28px;
+  display: inline-block;
+  &:hover,
+  &:focus,
+  &.is-active {
+    color: @grey;
+    border-color: @grey;
+    text-decoration: none;
+  }
+}
+
+.white-transparent-btn {
+  .font(@roboto, 400);
+  color: @white;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 30px;
+  border: 2px solid @white;
+  border-radius: 28px;
+  display: inline-block;
+  &:hover,
+  &:focus,
+  &.is-active {
+    color: @grey;
+    border-color: @grey;
+    text-decoration: none;
+  }
+}
+
+.btn-download {
+  padding-left: 60px;
+  background-image: url('../images/download-icon.png');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
+.btn-video {
+  padding-left: 60px;
+  background-image: url('../images/video-icon.png');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
+.azure-transparent-btn.btn-download {
+  background-image: url('../images/download-azure-icon.png');
+}
+
+.btn-purchase {
+  padding-left: 60px;
+  background-image: url('../images/purchase-icon.png');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
+.text-azure {
+  color: @azure;
+}

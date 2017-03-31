@@ -1,0 +1,69 @@
+body.navbar-is-fixed-top {
+  margin-top: 0;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: @grey;
+  &.scrolled {
+    background-color: @transparent-azure;
+    border-color: @white;
+    .navbar-btn {
+      margin-top: 11px;
+      margin-bottom: 11px;
+    }
+    #block-revenuemasters-main-menu {
+      .menu {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.navbar-btn {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  .transition(margin 0.2s);
+  img {
+    width: 300px;
+  }
+}
+
+#block-revenuemasters-main-menu {
+  .menu {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    font-size: 15px;
+    .transition(margin 0.2s);
+    > li {
+      > a {
+        .font(@roboto, 500);
+        padding: 0;
+        margin: 15px;
+        color: @white;
+        &:hover,
+        &:focus,
+        &.is-active {
+          border-bottom: 2px solid @white;
+        }
+      }
+      &:last-child {
+        > a {
+          .font(@roboto, 700);
+          margin: 0 15px;
+          padding: 15px 30px;
+          border-radius: 25px;
+          background-color: @azure;
+          &:hover,
+          &:focus,
+          &.is-active {
+            border: none;
+            color: @azure;
+            background-color: @white;
+          }
+        }
+      }
+    }
+  }
+}
