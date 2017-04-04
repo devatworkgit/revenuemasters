@@ -3,27 +3,72 @@ body.navbar-is-fixed-top {
 }
 
 .navbar-default {
-  background-color: transparent;
-  border-color: @grey;
-  &.scrolled {
-    background-color: @transparent-azure;
-    border-color: @white;
+  background-color: @azure;
+  border-color: @white;
+}
+
+.path-frontpage {
+  .navbar-default {
+    background-color: transparent;
+    border-color: @grey;
     .navbar-btn {
-      margin-top: 11px;
-      margin-bottom: 11px;
+      margin-top: 36px;
+      margin-bottom: 36px;
     }
     #block-revenuemasters-main-menu {
       .menu {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        > li {
+          &:last-child {
+            > a {
+              background-color: @azure;
+              color: @white;
+              &:hover,
+              &:focus,
+              &.is-active {
+                color: @white;
+                background-color: @grey;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.scrolled {
+      background-color: @transparent-azure;
+      border-color: @white;
+      .navbar-btn {
+        margin-top: 11px;
+        margin-bottom: 11px;
+      }
+      #block-revenuemasters-main-menu {
+        .menu {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          > li {
+            &:last-child {
+              > a {
+                background-color: @white;
+                color: @azure;
+                &:hover,
+                &:focus,
+                &.is-active {
+                  color: @white;
+                  background-color: @grey;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
 .navbar-btn {
-  margin-top: 36px;
-  margin-bottom: 36px;
+  margin-top: 11px;
+  margin-bottom: 11px;
   .transition(margin 0.2s);
   img {
     width: 300px;
@@ -32,8 +77,8 @@ body.navbar-is-fixed-top {
 
 #block-revenuemasters-main-menu {
   .menu {
-    margin-top: 45px;
-    margin-bottom: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 15px;
     .transition(margin 0.2s);
     > li {
@@ -46,6 +91,8 @@ body.navbar-is-fixed-top {
         &:focus,
         &.is-active {
           border-bottom: 2px solid @white;
+          margin-bottom: 13px;
+          background-color: transparent;
         }
       }
       &:last-child {
@@ -54,13 +101,14 @@ body.navbar-is-fixed-top {
           margin: 0 15px;
           padding: 15px 30px;
           border-radius: 25px;
-          background-color: @azure;
+          background-color: @white;
+          color: @azure;
           &:hover,
           &:focus,
           &.is-active {
             border: none;
-            color: @azure;
-            background-color: @white;
+            color: @white;
+            background-color: @grey;
           }
         }
       }

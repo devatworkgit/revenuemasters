@@ -1,0 +1,44 @@
+.form-control {
+  min-height: 50px;
+  border-radius: 0;
+  font-size: 16px;
+  border-color: @white-gray;
+}
+
+.form-item {
+  .intl-tel-input {
+    display: inherit;
+    input {
+      display: inherit;
+      width: 100%;
+    }
+  }
+}
+
+.form-item--error-message {
+  color: @red;
+}
+
+.input-group-btn:last-child {
+  > .btn, 
+  > .btn-group {
+    padding: 10px 15px;
+    border-radius: 0;
+    font-size: 20px;
+    background-color: @azure;
+    border-color: @azure;
+    color: @white;
+    &:hover,
+    &:focus {
+      background-color: @grey;
+      border-color: @grey;
+    }
+  }
+}
+
+.webform-submission-form.row {
+  .form-actions {
+    float: left;
+    padding: 0 15px;
+  }
+}

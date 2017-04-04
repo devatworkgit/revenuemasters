@@ -18,7 +18,40 @@ h4, .h4 {
   font-size: 20px;
 }
 
+.main-container {
+  padding-top: 15px;
+  margin-top: -15px;
+  background-color: @white;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+#head {
+  margin-top: 91px;
+}
+
+.path-frontpage {
+  .main-container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #head {
+    margin-top: 0;
+  }
+}
+
+.breadcrumb {
+  .font(@roboto, 400);
+  font-size: 13px;
+  padding: 0;
+  background-color: transparent;
+  .active {
+    color: @light-black;
+  }
+}
+
 .page-header {
+  .font(@roboto, 400);
   border: none;
 }
 
@@ -83,6 +116,12 @@ h4, .h4 {
   background-image: url('../images/download-icon.png');
   background-repeat: no-repeat;
   background-position: 20px center;
+  &:hover, 
+  &:focus, 
+  &:active, 
+  &:active:focus {
+    background-image: url('../images/download-icon.png');
+  }
 }
 
 .btn-video {
@@ -90,10 +129,22 @@ h4, .h4 {
   background-image: url('../images/video-icon.png');
   background-repeat: no-repeat;
   background-position: 20px center;
+  &:hover, 
+  &:focus, 
+  &:active, 
+  &:active:focus {
+    background-image: url('../images/video-icon.png');
+  }
 }
 
 .azure-transparent-btn.btn-download {
   background-image: url('../images/download-azure-icon.png');
+  &:hover, 
+  &:focus, 
+  &:active, 
+  &:active:focus {
+    background-image: url('../images/download-azure-icon.png');
+  }
 }
 
 .btn-purchase {
@@ -101,8 +152,63 @@ h4, .h4 {
   background-image: url('../images/purchase-icon.png');
   background-repeat: no-repeat;
   background-position: 20px center;
+  &:hover, 
+  &:focus, 
+  &:active, 
+  &:active:focus {
+    background-image: url('../images/purchase-icon.png');
+  }
 }
 
 .text-azure {
   color: @azure;
+}
+
+.sidebar-menu {
+  .menu {
+    > li {
+      > a {
+        background-color: @white-grey;
+        .font(@roboto, 700);
+        color: @light-black;
+        border: 1px solid @white-gray;
+        border-bottom: 0;
+        padding: 14px 15px;
+        &:hover,
+        &:focus,
+        &.is-active {
+          background-color: @azure;
+          color: @white;
+        }
+      }
+      &:last-child {
+        border-bottom: 1px solid @white-gray;
+      }
+    }
+  }
+}
+
+.region-sidebar-first, 
+.region-sidebar-second {
+  .block {
+    margin-bottom: 30px;
+  }
+}
+
+.field--name-body {
+  h1, h2, h3, h4, h5, h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.custom-block {
+  padding: 20px;
+  background-color: @blue;
+  color: @white;
+  .block-title {
+    .h3();
+    margin-top: 0;
+  }
 }

@@ -101,11 +101,7 @@
 {% if page.head %}
   <div id="head">
     {% block head %}
-      <div class="container" role="head">
-        <div class="row">
-          {{ page.head }}
-        </div>
-      </div>
+      {{ page.head }}
     {% endblock %}
   </div>
 {% endif %}
