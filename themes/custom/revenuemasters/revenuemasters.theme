@@ -25,7 +25,7 @@ function revenuemasters_form_simplenews_subscriptions_block_newsletter_alter(&$f
  /**
   * Implements hook_preprocess_html().
   */
- function themename_preprocess_html(&$variables) {
+ function revenuemasters_preprocess_html(&$variables) {
    if ($node = \Drupal::request()->attributes->get('node')) {
      $variables['attributes']['class'][] = 'page-node-' . $node->id();
    }
