@@ -145,6 +145,7 @@ function admin_menu_system_info_alter(&$info, $file, $type) {
 /**
  * Implements hook_page_bottom().
  */
+ /*
 function admin_menu_page_bottom(array &$page_bottom) {
   if (!user_access('access administration menu') || admin_menu_suppress(FALSE)) {
     return;
@@ -240,7 +241,7 @@ function admin_menu_page_bottom(array &$page_bottom) {
 
   $attached['drupalSettings']['admin_menu']['settings'] = $settings;
 }
-
+*/
 /**
  * Suppress display of administration menu.
  *
