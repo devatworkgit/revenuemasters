@@ -4,7 +4,9 @@
 #block-productsrmreimbursementacceleratorbanner,
 #block-bannerourclients,
 #block-bannerblog,
-#block-bannercontact {
+#block-bannercontact,
+#block-banneraboutus,
+#block-bannerpricing {
   min-height: 300px;
   background-image: url('../images/product-banner.jpg');
 }
@@ -27,6 +29,8 @@
 .page-node-20 .js-quickedit-page-title, 
 .page-node-17 .js-quickedit-page-title,
 .page-node-12 .js-quickedit-page-title,
+.page-node-11 .js-quickedit-page-title,
+.page-node-10 .js-quickedit-page-title,
 .path-blog .js-quickedit-page-title,
 .path-webform .js-quickedit-page-title {
   display: none;
@@ -40,4 +44,20 @@ ul.faq {
 ul.faq li {
   background: url('../images/question.png') no-repeat left top;
   padding-left: 44px;
+}
+
+.pricing-boxes{
+  .box > .icon { text-align: center; position: relative; }
+  .box > .icon > .image {position: relative; z-index: 2; margin: auto; width: 110px; height: 110px; border: 8px solid white; line-height: 106px; border-radius: 50%; background: #009eeb; vertical-align: middle; }
+  .box > .icon:hover > .image { background: #333; }
+  .box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+  .box > .icon:hover > .image > i { color: white !important; }
+  .box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; }
+  .box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: white; }
+  .box > .icon > .info > h3.title { font-size: 16px; color: #222; font-weight: 700; }
+  .box > .icon > .info > p { font-size: 15px; color: #666; line-height: 1.5em; margin: 20px;}
+  .box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: #222; }
+  .box > .icon > .info > .more a {font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+  .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
+  .box .space { height: 30px; }
 }
