@@ -12,13 +12,13 @@ body.navbar-is-fixed-top {
     background-color: transparent;
     border-color: @grey;
     .navbar-btn {
-      margin-top: 36px;
-      margin-bottom: 36px;
+      margin-top: 42px;
+      margin-bottom: 42px;
     }
     #block-revenuemasters-main-menu {
-      .menu {
-        margin-top: 45px;
-        margin-bottom: 45px;
+      .menu.nav {
+        margin-top: 44px;
+        margin-bottom: 44px;
         > li {
           &:last-child {
             > a {
@@ -39,11 +39,11 @@ body.navbar-is-fixed-top {
       background-color: @transparent-azure;
       border-color: @white;
       .navbar-btn {
-        margin-top: 11px;
-        margin-bottom: 11px;
+        margin-top: 18px;
+        margin-bottom: 18px;
       }
       #block-revenuemasters-main-menu {
-        .menu {
+        .menu.nav {
           margin-top: 20px;
           margin-bottom: 20px;
           > li {
@@ -70,23 +70,21 @@ body.navbar-is-fixed-top {
   margin-top: 11px;
   margin-bottom: 11px;
   .transition(margin 0.2s);
-  img {
-    width: 300px;
-  }
 }
 
 #block-revenuemasters-main-menu {
-  .menu {
+  .menu.nav {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 15px;
     .transition(margin 0.2s);
-    > li {
+    > li, > .open {
       > a {
         .font(@roboto, 500);
         padding: 0;
         margin: 15px;
         color: @white;
+        background-color: transparent;
         &:hover,
         &:focus,
         &.is-active {
@@ -109,6 +107,37 @@ body.navbar-is-fixed-top {
             border: none;
             color: @white;
             background-color: @grey;
+          }
+        }
+      }
+      .dropdown-menu { 
+        display: none;
+      }
+      &:hover {
+        .dropdown-menu { 
+          display: block;
+        }
+      }
+      .dropdown-menu {
+        margin-right: 0;
+        margin-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 0;
+        border: 1px solid @grey;
+        > li, > .open {
+          > a {
+            .font(@roboto, 500);
+            padding: 0;
+            margin: 15px;
+            color: @grey;
+            background-color: transparent;
+            &:hover,
+            &:focus,
+            &.is-active {
+              color: @azure;
+              background-color: transparent;
+            }
           }
         }
       }
