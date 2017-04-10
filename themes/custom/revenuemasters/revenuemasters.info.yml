@@ -19,6 +19,7 @@ regions:
   bottom_1: 'Bottom 1'
   bottom_2: 'Bottom 2'
   bottom_3: 'Bottom 3'
+  map: 'Map'
   footer_top: 'Top Footer'
   footer: 'Footer'
 

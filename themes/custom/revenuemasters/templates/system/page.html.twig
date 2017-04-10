@@ -227,6 +227,16 @@
   </div>
 {% endif %}
 
+{# Map #}
+{% if page.map %}
+  <div id="map">
+    {% block map %}
+      {{ page.map }}
+    {% endblock %}
+  </div>
+{% endif %}
+
+
 {% if page.footer_top %}
   {% block footer_top %}
     <div class="footer_top" role="contentinfo">
