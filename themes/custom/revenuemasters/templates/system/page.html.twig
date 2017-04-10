@@ -200,6 +200,19 @@
   </div>
 {% endif %}
 
+{# Bottom 3 #}
+{% if page.bottom_3 %}
+  <div id="bottom_3">
+    {% block bottom_3 %}
+      <div class="container" role="bottom_3">
+        <div class="row">
+          {{ page.bottom_3 }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endif %}
+
 {# Bottom 2 #}
 {% if page.bottom_2 %}
   <div id="bottom_2">
@@ -213,18 +226,7 @@
   </div>
 {% endif %}
 
-{# Bottom 3 #}
-{% if page.bottom_3 %}
-  <div id="bottom_3">
-    {% block bottom_3 %}
-      <div class="container" role="bottom_3">
-        <div class="row">
-          {{ page.bottom_3 }}
-        </div>
-      </div>
-    {% endblock %}
-  </div>
-{% endif %}
+
 
 {% if page.footer_top %}
   {% block footer_top %}
