@@ -1,16 +1,30 @@
 #bottom_1 {
   background-image: url('../images/bottom_1-bg.png');
   background-size: cover;
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: @white;
+  @media (min-width: @screen-sm-min) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
   #block-startyourfreetrialtoday {
     h4 {
       color: @grey;
     }
     h2 {
       .font(@roboto, 700);
-      font-size: 40px;
+      font-size: 25px;
+      @media (min-width: @screen-sm-min) {
+        font-size: 30px;
+      }
+      @media (min-width: @screen-md-min) {
+        font-size: 40px;
+      }
     }
   }
 }
@@ -19,8 +33,16 @@
   z-index: 0;
   background-color: rgba(128, 128, 128, 0.23);
   #block-watchourinformativevideo {
-    margin-bottom: 80px;
-    margin-top: 85px;
+    margin-bottom: 25px;
+    margin-top: 30px;
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: 40px;
+      margin-top: 45px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-bottom: 80px;
+      margin-top: 85px;
+    }
   }
   #block-video {
     .youtube-container--responsive {
@@ -39,6 +61,14 @@
 }
 
 #block-inspirecustomerloyalty {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
 }

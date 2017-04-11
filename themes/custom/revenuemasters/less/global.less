@@ -1,21 +1,53 @@
 body {
   .font(@roboto, 300);
-  font-size: 17px;
+  font-size: 15px;
+  @media (min-width: @screen-sm-min) {
+    font-size: 16px;
+  }
+  @media (min-width: @screen-md-min) {
+    font-size: 17px;
+  }
 }
 
 h1, .h1 {
   .font(@proximanovaalt);
-  font-size: 48px;
+  font-size: 32px;
+  @media (min-width: @screen-sm-min) {
+    font-size: 40px;
+  }
+  @media (min-width: @screen-md-min) {
+    font-size: 48px;
+  }
 }
 
 h2, .h2 {
   .font(@roboto, 400);
-  font-size: 36px;
+  font-size: 24px;
+  @media (min-width: @screen-sm-min) {
+    font-size: 30px;
+  }
+  @media (min-width: @screen-md-min) {
+    font-size: 36px;
+  }
+}
+
+h3, .h3 {
+  .font(@roboto, 400);
+  font-size: 20px;
+  @media (min-width: @screen-sm-min) {
+    font-size: 22px;
+  }
+  @media (min-width: @screen-md-min) {
+    font-size: 24px;
+  }
 }
 
 h4, .h4 {
   .font(@roboto, 400);
-  font-size: 20px;
+  font-size: 18px;
+  @media (min-width: @screen-md-min) {
+    font-size: 20px;
+  }
 }
 
 .main-container {
@@ -27,7 +59,13 @@ h4, .h4 {
 }
 
 #head {
-  margin-top: 91px;
+  margin-top: 71px;
+  @media (min-width: @screen-sm-min) {
+    margin-top: 75px;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-top: 96px;
+  }
 }
 
 .path-frontpage {
@@ -57,13 +95,17 @@ h4, .h4 {
 
 .btn-default {
   .font(@roboto, 400);
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   color: @white;
   background-color: @azure;
   border: 2px solid @azure;
-  padding: 10.5px 30px;
+  padding: 7px 15px;
   border-radius: 25px;
+  @media (min-width: @screen-md-min) {
+    font-size: 18px;
+    padding: 10.5px 30px;
+  }
   &:hover, 
   &:focus, 
   &:active, 
@@ -79,11 +121,15 @@ h4, .h4 {
   .font(@roboto, 400);
   color: @azure;
   text-transform: uppercase;
-  font-size: 18px;
-  padding: 10px 30px;
+  font-size: 16px;
+  padding: 7px 15px;
   border: 2px solid @azure;
   border-radius: 28px;
   display: inline-block;
+  @media (min-width: @screen-md-min) {
+    font-size: 18px;
+    padding: 10.5px 30px;
+  }
   &:hover,
   &:focus,
   &.is-active {
@@ -97,11 +143,15 @@ h4, .h4 {
   .font(@roboto, 400);
   color: @white;
   text-transform: uppercase;
-  font-size: 18px;
-  padding: 10px 30px;
+  font-size: 16px;
+  padding: 7px 15px;
   border: 2px solid @white;
   border-radius: 28px;
   display: inline-block;
+  @media (min-width: @screen-md-min) {
+    font-size: 18px;
+    padding: 10.5px 30px;
+  }
   &:hover,
   &:focus,
   &.is-active {
@@ -112,10 +162,14 @@ h4, .h4 {
 }
 
 .btn-download {
-  padding-left: 60px;
+  padding-left: 40px;
   background-image: url('../images/download-icon.png');
   background-repeat: no-repeat;
-  background-position: 20px center;
+  background-position: 10px center;
+  @media (min-width: @screen-md-min) {
+    padding-left: 60px;
+    background-position: 20px center;
+  }
   &:hover, 
   &:focus, 
   &:active, 
@@ -125,10 +179,14 @@ h4, .h4 {
 }
 
 .btn-video {
-  padding-left: 60px;
+  padding-left: 40px;
   background-image: url('../images/video-icon.png');
   background-repeat: no-repeat;
-  background-position: 20px center;
+  background-position: 10px center;
+  @media (min-width: @screen-md-min) {
+    padding-left: 60px;
+    background-position: 20px center;
+  }
   &:hover, 
   &:focus, 
   &:active, 
@@ -148,10 +206,14 @@ h4, .h4 {
 }
 
 .btn-purchase {
-  padding-left: 60px;
+  padding-left: 40px;
   background-image: url('../images/purchase-icon.png');
   background-repeat: no-repeat;
-  background-position: 20px center;
+  background-position: 10px center;
+  @media (min-width: @screen-md-min) {
+    padding-left: 60px;
+    background-position: 20px center;
+  }
   &:hover, 
   &:focus, 
   &:active, 
@@ -214,4 +276,8 @@ h4, .h4 {
     .h3();
     margin-top: 0;
   }
+}
+
+.img-responsive {
+  margin: 0 auto;
 }

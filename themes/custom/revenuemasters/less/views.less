@@ -1,23 +1,53 @@
 .view-reasons-to-consider.view-display-id-page_1 {
-  margin-bottom: 85px;
+  margin-bottom: 30px;
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: 45px;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-bottom: 85px;
+  }
   .view-header {
     .clearfix();
-    margin-top: 50px;
-    margin-bottom: 110px;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    @media (min-width: @screen-sm-min) {
+      margin-top: 25px;
+      margin-bottom: 55px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-top: 50px;
+      margin-bottom: 110px;
+    }
   }
   .view-content {
     .clearfix();
     .views-row {
-      width: 20%;
+      width: 50%;
       float: left;
       padding: 0 15px;
+      margin-bottom: 15px;
+      @media (min-width: @screen-sm-min) {
+        width: 20%;
+      }
+      @media (max-width: @screen-xs-max) {
+        &:nth-child(2n+1) {
+          clear: left;
+        }
+      }
     }
   }
   .view-footer {
     .clearfix();
-    margin-top: 50px;
-    padding-top: 35px;
+    padding-top: 15px;
     border-top: 1px solid @white-gray;
+    @media (min-width: @screen-sm-min) {
+      margin-top: 5px;
+      padding-top: 20px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-top: 35px;
+      padding-top: 35px;
+    }
   }
 }
 
@@ -30,8 +60,12 @@
         }
       }
       .views-field-title {
-        font-size: 19px;
-        margin-top: 40px;
+        font-size: 16px;
+        margin-top: 20px;
+        @media (min-width: @screen-md-min) {
+          font-size: 19px;
+          margin-top: 40px;
+        }
       }
     }
   }

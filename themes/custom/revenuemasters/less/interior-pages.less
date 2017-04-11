@@ -8,34 +8,49 @@
 #block-banneraboutus,
 #block-bannerpricing,
 #block-bannerwhytobuy {
-  min-height: 300px;
+  min-height: 200px;
   background-image: url('../images/product-banner.jpg');
+  @media (min-width: @screen-md-min) {
+    min-height: 300px;
+  }
 }
 
 .page-node-type-page .main-container,
 .path-webform .main-container {
   text-align: center;
 }
+.path-blog, 
+.page-node-type-article {
+  .field--name-field-image {
+    padding-left: 0;
+  }
+}
 
 .icon-container {
-    float: left;
-    color: #009eeb;
-    font-size: 53px;
+  float: left;
+  color: #009eeb;
+  font-size: 40px;
 }
 
 .body-contact {
-  margin-left: 68px;
+  margin-left: 50px;
+  font-size: 14px;
+  h4 {
+    margin-bottom: 0;
+  }
 }
-.page-node-19 .js-quickedit-page-title,
-.page-node-20 .js-quickedit-page-title, 
-.page-node-17 .js-quickedit-page-title,
-.page-node-12 .js-quickedit-page-title,
-.page-node-11 .js-quickedit-page-title,
-.page-node-10 .js-quickedit-page-title,
-.page-node-18 .js-quickedit-page-title,
-.path-blog .js-quickedit-page-title,
-.path-webform .js-quickedit-page-title {
-  display: none;
+.page-node-19,
+.page-node-20, 
+.page-node-17,
+.page-node-12,
+.page-node-11,
+.page-node-10,
+.page-node-18,
+.path-blog,
+.path-webform {
+ .js-quickedit-page-title {
+    display: none;
+  }
 }
 
 ul.faq {
@@ -43,13 +58,20 @@ ul.faq {
   padding: 0;
   margin: 0;
 }
+
 ul.faq li {
   background: url('../images/question.png') no-repeat left top;
   padding-left: 44px;
 }
 
 .why-us{
-  padding: 50px;
+  padding: 15px 0px;
+  @media (min-width: @screen-sm-min) {
+    padding: 25px;
+  }
+  @media (min-width: @screen-md-min) {
+    padding: 50px;
+  }
   .why-us-list {
     list-style-type: none;
     li{

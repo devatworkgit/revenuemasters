@@ -3,15 +3,31 @@
   background-size: cover;
   background-position: bottom;
   #block-head {
-    margin-top: 280px;
-    margin-bottom: 180px;
+    margin-top: 90px;
+    margin-bottom: 40px;
     .font(@proximanovaalt);
-    font-size: 18px;
+    font-size: 15px;
     color: @white;
+    @media (min-width: @screen-sm-min) {
+      margin-top: 180px;
+      margin-bottom: 80px;
+      font-size: 16px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-top: 280px;
+      margin-bottom: 180px;
+      font-size: 18px;
+    }
     h1 {
       strong {
         .font(@proximanovaalt-bold);
-        font-size: 60px;
+        font-size: 34px;
+        @media (min-width: @screen-sm-min) {
+          font-size: 50px;
+        }
+        @media (min-width: @screen-md-min) {
+          font-size: 60px;
+        }
       }
     }
   }

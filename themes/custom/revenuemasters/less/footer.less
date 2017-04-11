@@ -1,13 +1,24 @@
 .footer_top {
-  padding-top: 75px;
-  padding-bottom: 55px;
+  padding-top: 30px;
+  padding-bottom: 15px;
   background-image: url('../images/footer_top-bg.png');
   background-size: cover;
   color: @white;
   position: relative;
   z-index: 2;
+  @media (min-width: @screen-sm-min) {
+    padding-top: 45px;
+  padding-bottom: 30px;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-top: 75px;
+    padding-bottom: 55px;
+  }
   #block-simplenewssubscription {
-    font-size: 18px;
+    font-size: 16px;
+    @media (min-width: @screen-md-min) {
+      font-size: 18px;
+    }
     #simplenews-subscriptions-block-newsletter {
       max-width: 585px;
       margin: 0 auto;
@@ -21,13 +32,18 @@
         }
         input {
           .font(@roboto, 400, italic);
-          min-height: 50px;
+          min-height: 40px;
           border: 2px solid @azure;
           border-radius: 25px;
           background-color: transparent;
-          padding-left: 30px;
-          padding-right: 185px;
+          padding-left: 15px;
+          padding-right: 120px;
           color: @grey;
+          @media (min-width: @screen-md-min) {
+            min-height: 50px;
+            padding-left: 30px;
+            padding-right: 185px;
+          }
         }
       }
       .form-actions {
