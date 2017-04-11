@@ -52,10 +52,12 @@ h4, .h4 {
 
 .main-container {
   padding-top: 15px;
-  margin-top: -15px;
   background-color: @white;
   position: relative;
   margin-bottom: 50px;
+  @media (min-width: @screen-sm-min) {
+    margin-top: -15px;
+  }
 }
 
 #head {
