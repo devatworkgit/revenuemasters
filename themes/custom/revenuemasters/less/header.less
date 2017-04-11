@@ -166,7 +166,9 @@ body.navbar-is-fixed-top {
         }
       }
       &:last-child {
-        margin-top: 5px;
+        @media (max-width: @screen-xs-max) {
+          margin-top: 5px;
+        }
         > a {
           .font(@roboto, 700);
           margin: 0 15px;
