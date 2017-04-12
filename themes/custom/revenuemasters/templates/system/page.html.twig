@@ -187,6 +187,59 @@
   </div>
 {% endblock %}
 
+{# Content 1 #}
+{% if page.content_1 %}
+  <div id="content_1">
+    {% block content_1 %}
+      <div class="container" role="content_1">
+        <div class="row">
+          {{ page.content_1 }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endif %}
+
+{# Content 2 #}
+{% if page.content_2 %}
+  <div id="content_2">
+    {% block content_2 %}
+      <div class="container" role="content_2">
+        <div class="row">
+          {{ page.content_2 }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endif %}
+
+{# Content 3 #}
+{% if page.content_3 %}
+  <div id="content_3">
+    {% block content_3 %}
+      <div class="container" role="content_3">
+        <div class="row">
+          {{ page.content_3 }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endif %}
+
+{# Content 4 #}
+{% if page.content_4 %}
+  <div id="content_4">
+    {% block content_4 %}
+      <div class="container" role="content_4">
+        <div class="row">
+          {{ page.content_4 }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endif %}
+
+
 {# Bottom 1 #}
 {% if page.bottom_1 %}
   <div id="bottom_1">
