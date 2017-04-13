@@ -1,0 +1,28 @@
+(function($){
+  
+  Drupal.behaviors.animations = {
+    attach: function(context, settings) {
+      element = $('.animate .animated-object');
+      $(document).ready(function (event) {
+        rm_animate(element, 300);
+      });
+      $(window).scroll(function (event) {
+        rm_animate(element, 300);
+      });
+    }
+  };
+  
+  function rm_animate(element, time) {
+    delay = 0;
+    element.each(function( index ) {
+      if ($(this).offset().top < $(window).scrollTop() + $(window).height() && !$(this).hasClass('active')) {
+        $(this).delay(delay).queue(function(next){
+          $(this).addClass("active");
+          next();
+        });
+        delay = delay + time;
+      }
+    });
+  }
+
+})(jQuery);
