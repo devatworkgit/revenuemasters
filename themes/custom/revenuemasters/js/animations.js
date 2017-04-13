@@ -16,11 +16,10 @@
     delay = 0;
     element.each(function( index ) {
       if ($(this).offset().top < $(window).scrollTop() + $(window).height() && !$(this).hasClass('active')) {
-        $(this).delay(delay).queue(function(next){
+        $(this).delay(time * index).queue(function(next){
           $(this).addClass("active");
           next();
         });
-        delay = delay + time;
       }
     });
   }
