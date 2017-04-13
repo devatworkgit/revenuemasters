@@ -3,13 +3,11 @@
   Drupal.behaviors.animations = {
     attach: function(context, settings) {
       element = $('.animate .animated-object');
-      loaded = false;
       $(document).ready(function (event) {
         rm_animate(element, 300);
       });
       $(window).scroll(function (event) {
         rm_animate(element, 300);
-        loaded = true;
       });
     }
   };
