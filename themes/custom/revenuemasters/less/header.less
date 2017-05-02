@@ -169,6 +169,9 @@ body.navbar-is-fixed-top {
         @media (max-width: @screen-xs-max) {
           margin-top: 5px;
         }
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
+          display: none;
+        }
         > a {
           .font(@roboto, 700);
           margin: 0 15px;
