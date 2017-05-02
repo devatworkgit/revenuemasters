@@ -91,14 +91,19 @@ ul.faq li {
 .page-node-20 #bottom_2,
 .page-node-19 #bottom_2{
   background: url('../images/how-it-works-bg.jpg') no-repeat center center;
-  height: 759px;
+  background-size: cover;
 }
 
 .how-it-works{
-  padding-left: 28%;
-  padding-top: 8%;
+  padding-top: 5%;
   text-align: left;
   color: white;
+  @media (min-width: @screen-sm-min) {
+    padding-left: 15%;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-left: 28%;
+  }
 }    
 
 .pricing-boxes{
