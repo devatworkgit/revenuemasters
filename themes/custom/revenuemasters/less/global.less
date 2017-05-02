@@ -180,6 +180,23 @@ h4, .h4 {
   }
 }
 
+.btn-email {
+  padding-left: 40px;
+  background-image: url('../images/email-icon.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  @media (min-width: @screen-md-min) {
+    padding-left: 60px;
+    background-position: 20px center;
+  }
+  &:hover, 
+  &:focus, 
+  &:active, 
+  &:active:focus {
+    background-image: url('../images/email-icon.png');
+  }
+}
+
 .btn-video {
   padding-left: 40px;
   background-image: url('../images/video-icon.png');
