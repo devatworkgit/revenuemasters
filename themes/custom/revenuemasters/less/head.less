@@ -1,34 +1,66 @@
-#head {
-  background-image: url('../images/bg.jpg');
-  background-size: cover;
-  background-position: bottom;
-  #block-head {
-    margin-top: 90px;
-    margin-bottom: 40px;
-    .font(@proximanovaalt);
-    font-size: 15px;
-    color: @white;
-    @media (min-width: @screen-sm-min) {
-      margin-top: 180px;
-      margin-bottom: 80px;
-      font-size: 16px;
-    }
-    @media (min-width: @screen-md-min) {
-      margin-top: 280px;
-      margin-bottom: 180px;
-      font-size: 18px;
-    }
-    h1 {
-      strong {
-        .font(@proximanovaalt-bold);
-        font-size: 34px;
+body{
+  &.path-frontpage {
+    #head {
+      background-image: url('../images/bg.jpg');
+      background-size: cover;
+      background-position: bottom;
+      #block-head {
+        margin-top: 90px;
+        margin-bottom: 40px;
+        .font(@proximanovaalt);
+        font-size: 15px;
+        color: @white;
         @media (min-width: @screen-sm-min) {
-          font-size: 50px;
+          margin-top: 180px;
+          margin-bottom: 80px;
+          font-size: 16px;
         }
         @media (min-width: @screen-md-min) {
-          font-size: 60px;
+          margin-top: 280px;
+          margin-bottom: 180px;
+          font-size: 18px;
+        }
+        h1 {
+          strong {
+            .font(@proximanovaalt-bold);
+            font-size: 34px;
+            @media (min-width: @screen-sm-min) {
+              font-size: 50px;
+            }
+            @media (min-width: @screen-md-min) {
+              font-size: 60px;
+            }
+          }
         }
       }
+    }
+  }
+  #head {
+    background-image: url('../images/pricing.jpg');
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  &.page-node-8 {
+    #head {
+      background-image: url('../images/product.jpg');
+    }
+  }
+  &.page-node-19, &.page-node-20 {
+    #head {
+      background-image: url('../images/rmccm.jpg');
+    }
+  }
+  
+  &.page-node-18 {
+    #head {
+      background-image: url('../images/buy.jpg');
+    }
+  }
+
+  &.page-node-17 {
+    #head {
+      background-image: url('../images/faq-banner.jpg');
     }
   }
 }

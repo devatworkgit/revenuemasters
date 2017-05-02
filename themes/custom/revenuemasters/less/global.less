@@ -55,9 +55,6 @@ h4, .h4 {
   background-color: @white;
   position: relative;
   margin-bottom: 50px;
-  @media (min-width: @screen-sm-min) {
-    margin-top: 72px;
-  }
 }
 
 #head {
@@ -82,17 +79,31 @@ h4, .h4 {
 
 .breadcrumb {
   .font(@roboto, 400);
-  font-size: 13px;
   padding: 0;
   background-color: transparent;
-  .active {
-    color: @light-black;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 0;
+  li{
+    display: inline-block;
+    border-top: 1px white dashed;
+    border-bottom: 1px white dashed;
+    padding: 4px;
+    a{
+      color: white;
+    }
+  }
+  .active{
+    color: white;
   }
 }
 
 .page-header {
   .font(@roboto, 400);
   border: none;
+  color: @white;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .btn-default {
@@ -343,44 +354,6 @@ h4, .h4 {
 
 .img-responsive {
   margin: 0 auto;
-}
-
-.breadcrumb {
-  font-size: 24px;
-  padding: 6px;
-  margin-top: -128px;
-  @media (min-width: @screen-sm-min) {
-    margin-top: -111px;
-  }
-  @media (min-width: @screen-md-min) {
-    margin-top: -128px;
-  }
-  display: block;
-  text-align: center;
-  li{
-    display: inline-block;
-    border-top: 1px white dashed;
-    border-bottom: 1px white dashed;
-    padding: 4px;
-    a{
-      color: white;
-    }
-  }
-  .active{
-    color: white;
-  }
-  /*
-  display: inline-block;
-  border-radius: 0;
-  border-top: 1px dashed black;
-  border-bottom: 1px dashed black;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  */
-}
-
-.region-header .breadcrumb {
-  display: none !important;
 }
 
 #content_1, #content_3 {
