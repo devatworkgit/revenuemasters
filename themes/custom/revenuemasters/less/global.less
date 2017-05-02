@@ -81,9 +81,15 @@ h4, .h4 {
   .font(@roboto, 400);
   padding: 0;
   background-color: transparent;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   margin-bottom: 0;
+  @media (min-width: @screen-sm-min) {
+    font-size: 21px;
+  }
+  @media (min-width: @screen-md-min) {
+    font-size: 24px;
+  }
   li{
     display: inline-block;
     border-top: 1px white dashed;
