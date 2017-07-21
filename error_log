@@ -1,0 +1,13 @@
+
+[08-May-2017 07:32:53 UTC] Error: Call to undefined function drupal_get_installed_schema_version() in /home/devatwor/public_html/dev/rm/core/includes/install.inc on line 80 #0 /home/devatwor/drush/src/Commands/core/UpdateDBCommands.php(192): drupal_load_updates()
+#1 /home/devatwor/drush/src/Commands/core/UpdateDBCommands.php(28): Drush\Commands\core\UpdateDBCommands->updateMain(Array)
+#2 [internal function]: Drush\Commands\core\UpdateDBCommands->updatedb(Array)
+#3 /home/devatwor/drush/vendor/consolidation/annotated-command/src/CommandProcessor.php(195): call_user_func_array(Array, Array)
+#4 /home/devatwor/drush/vendor/consolidation/annotated-command/src/CommandProcessor.php(141): Consolidation\AnnotatedCommand\CommandProcessor->runCommandCallback(Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#5 /home/devatwor/drush/vendor/consolidation/annotated-command/src/CommandProcessor.php(115): Consolidation\AnnotatedCommand\CommandProcessor->validateRunAndAlter(Array, Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#6 /home/devatwor/drush/includes/annotationcommand_adapter.inc(234): Consolidation\AnnotatedCommand\CommandProcessor->process(Object(Symfony\Component\Console\Output\ConsoleOutput), Array, Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#7 /home/devatwor/drush/includes/command.inc(199): annotationcommand_adapter_process_command()
+#8 /home/devatwor/drush/src/Boot/BaseBoot.php(73): drush_dispatch(Array)
+#9 /home/devatwor/drush/includes/preflight.inc(94): Drush\Boot\BaseBoot->bootstrap_and_dispatch()
+#10 /home/devatwor/drush/drush.php(11): drush_main()
+#11 {main}
