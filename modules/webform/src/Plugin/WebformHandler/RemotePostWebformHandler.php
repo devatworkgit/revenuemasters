@@ -2,11 +2,12 @@
 
 namespace Drupal\webform\Plugin\WebformHandler;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Serialization\Yaml;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\webform\WebformHandlerBase;
+use Drupal\webform\Plugin\WebformHandlerBase;
 use Drupal\webform\WebformSubmissionInterface;
 use Drupal\webform\WebformTokenManagerInterface;
 use GuzzleHttp\ClientInterface;
@@ -23,9 +24,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   label = @Translation("Remote post"),
  *   category = @Translation("External"),
  *   description = @Translation("Posts webform submissions to a URL."),
- *   cardinality = \Drupal\webform\WebformHandlerInterface::CARDINALITY_UNLIMITED,
- *   results = \Drupal\webform\WebformHandlerInterface::RESULTS_PROCESSED,
- *   submission = \Drupal\webform\WebformHandlerInterface::SUBMISSION_OPTIONAL,
+ *   cardinality = \Drupal\webform\Plugin\WebformHandlerInterface::CARDINALITY_UNLIMITED,
+ *   results = \Drupal\webform\Plugin\WebformHandlerInterface::RESULTS_PROCESSED,
+ *   submission = \Drupal\webform\Plugin\WebformHandlerInterface::SUBMISSION_OPTIONAL,
  * )
  */
 class RemotePostWebformHandler extends WebformHandlerBase {
@@ -47,15 +48,15 @@ class RemotePostWebformHandler extends WebformHandlerBase {
   /**
    * The token manager.
    *
-   * @var \Drupal\webform\WebformTranslationManagerInterface
+   * @var \Drupal\webform\WebformTokenManagerInterface
    */
   protected $tokenManager;
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, LoggerInterface $logger, EntityTypeManagerInterface $entity_type_manager, ModuleHandlerInterface $module_handler, ClientInterface $http_client, WebformTokenManagerInterface $token_manager) {
-    parent::__construct($configuration, $plugin_id, $plugin_definition, $logger, $entity_type_manager);
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, LoggerInterface $logger, ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager, ModuleHandlerInterface $module_handler, ClientInterface $http_client, WebformTokenManagerInterface $token_manager) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition, $logger, $config_factory, $entity_type_manager);
     $this->moduleHandler = $module_handler;
     $this->httpClient = $http_client;
     $this->tokenManager = $token_manager;
@@ -70,6 +71,7 @@ class RemotePostWebformHandler extends WebformHandlerBase {
       $plugin_id,
       $plugin_definition,
       $container->get('logger.factory')->get('webform.remote_post'),
+      $container->get('config.factory'),
       $container->get('entity_type.manager'),
       $container->get('module_handler'),
       $container->get('http_client'),
@@ -392,7 +394,7 @@ class RemotePostWebformHandler extends WebformHandlerBase {
       '#wrapper_attributes' => ['class' => ['container-inline'], 'style' => 'margin: 0'],
     ];
 
-    $build['returned'] = ['#markup' => '<hr/>'];
+    $build['returned'] = ['#markup' => '<hr />'];
 
     // Request.
     $build['request_url'] = [
@@ -418,7 +420,7 @@ class RemotePostWebformHandler extends WebformHandlerBase {
       ],
     ];
 
-    $build['returned'] = ['#markup' => '<hr/>'];
+    $build['returned'] = ['#markup' => '<hr />'];
 
     // Response.
     if ($response) {

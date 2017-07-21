@@ -34,7 +34,7 @@ class Telephone extends TextBase {
   /**
    * {@inheritdoc}
    */
-  public function prepare(array &$element, WebformSubmissionInterface $webform_submission) {
+  public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL) {
     parent::prepare($element, $webform_submission);
 
     // Add international library and classes.
@@ -83,7 +83,9 @@ class Telephone extends TextBase {
   /**
    * {@inheritdoc}
    */
-  public function formatHtmlItem(array $element, $value, array $options = []) {
+  public function formatHtmlItem(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
+    $value = $this->getValue($element, $webform_submission, $options);
+
     if (empty($value)) {
       return '';
     }
@@ -103,7 +105,7 @@ class Telephone extends TextBase {
         return t('<a href=":tel">@tel</a>', $t_args);
 
       default:
-        return parent::formatHtmlItem($element, $value, $options);
+        return parent::formatHtmlItem($element, $webform_submission, $options);
     }
   }
 

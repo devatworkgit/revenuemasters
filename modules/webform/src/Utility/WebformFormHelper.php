@@ -56,7 +56,7 @@ class WebformFormHelper {
   public static function &flattenElements(array &$build) {
     $elements = [];
     $duplicate_element_keys = [];
-    static::flattenElementsRecursive($build, $elements, $duplicate_element_keys);
+    self::flattenElementsRecursive($build, $elements, $duplicate_element_keys);
     return $elements;
   }
 
@@ -66,7 +66,7 @@ class WebformFormHelper {
    * @param array $build
    *   An render array.
    * @param array $elements
-   *   An empty array that  will be populated with references to all elements.
+   *   An empty array that will be populated with references to all elements.
    * @param array $duplicate_element_keys
    *   An array used to track elements with duplicate keys.
    */
@@ -97,7 +97,7 @@ class WebformFormHelper {
           $elements[$key] =& $build[$key];
         }
 
-        static::flattenElementsRecursive($element, $elements, $duplicate_element_keys);
+        self::flattenElementsRecursive($element, $elements, $duplicate_element_keys);
       }
     }
   }
